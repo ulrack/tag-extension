@@ -1,0 +1,18 @@
+{
+    "$schema": "service.compiler.extension.schema.json",
+    "class": "\\Ulrack\\Services\\Component\\Compiler\\Extension\\PassThroughCompiler",
+    "sortOrder": 10,
+    "key": "tags",
+    "schema": {
+        "type": "object",
+        "properties": {
+            "trigger": {
+                "type": "string"
+            },
+            "service": {
+                "type": "string"
+            }
+        },
+        "required": ["service", "trigger"]
+    }
+}

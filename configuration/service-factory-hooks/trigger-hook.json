@@ -1,0 +1,6 @@
+{
+    "$schema": "service.factory.hook.schema.json",
+    "class": "\\Ulrack\\TagExtension\\Factory\\Hook\\TriggerHook",
+    "sortOrder": 0,
+    "key": "global"
+}

@@ -1,0 +1,14 @@
+{
+    "$schema": "service.compiler.extension.schema.json",
+    "class": "\\Ulrack\\TagExtension\\Component\\Compiler\\Extension\\TriggersCompiler",
+    "sortOrder": 20,
+    "key": "triggers",
+    "schema": {
+        "type": "object",
+        "properties": {
+            "service": {
+                "type": "string"
+            }
+        }
+    }
+}

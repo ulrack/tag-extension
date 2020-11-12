@@ -1,0 +1,5 @@
+{
+    "$schema": "service.factory.extension.schema.json",
+    "class": "\\Ulrack\\TagExtension\\Factory\\Extension\\TriggersFactory",
+    "key": "triggers"
+}
