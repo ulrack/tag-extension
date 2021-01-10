@@ -29,12 +29,17 @@ class TriggersCompiler extends AbstractServiceCompilerExtension
         foreach ($services['tags'] as $key => $tag) {
             $triggerKey = $this->trimKey($tag['trigger']);
             if (isset($services['triggers'][$triggerKey])) {
-                $services['triggers'][$triggerKey]['tags'][] = $tag['service'];
+                $services['triggers'][$triggerKey]['tags']
+                    [$tag['sortOrder'] ?? 1000][] = $tag['service'];
             }
         }
 
+
+
         $triggers = ['services' => [], 'triggers' => []];
         foreach ($services['triggers'] as $triggerKey => $trigger) {
+            ksort($trigger['tags']);
+            $trigger['tags'] = array_merge(...$trigger['tags']);
             if (isset($trigger['service'])) {
                 $triggers['services'][$trigger['service']][] = $triggerKey;
             }

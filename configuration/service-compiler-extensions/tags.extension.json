@@ -11,6 +11,10 @@
             },
             "service": {
                 "type": "string"
+            },
+            "sortOrder": {
+                "type": "integer",
+                "default": 1000
             }
         },
         "required": ["service", "trigger"]

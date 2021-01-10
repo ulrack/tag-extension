@@ -31,7 +31,8 @@ all tags are collected and invoked.
 Tags define which service is attached to which trigger. For example, an
 `invocation` which adds a logger to an object through a method, can be
 registered to the object when the actual object is created, by defining that
-through the `triggers` and `tags`.
+through the `triggers` and `tags`. Optionally a third parameter can be provided,
+`sortOrder` is used to sort the tags. It defaults to `1000`.
 
 To create a tag, create a file in `configuration/tags` with the following content:
 ```json
